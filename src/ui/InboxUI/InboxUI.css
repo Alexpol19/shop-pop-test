@@ -1,0 +1,15 @@
+.inbox-page-content {
+  display: flex;
+  height: 100%;
+}
+
+.inbox-page-content__left {
+  flex:  0 0 292px;
+  border-right: 1px solid #E5E5E5;
+  height: 100%;
+}
+
+.inbox-page-content__right {
+  flex: 1;
+  height: 100%;
+}

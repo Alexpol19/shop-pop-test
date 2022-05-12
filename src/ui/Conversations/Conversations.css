@@ -1,0 +1,8 @@
+.conversations {
+  height: calc(100vh - 50px);
+}
+
+[data-simplebar] {
+  height: 100%;
+  overflow-x: hidden;
+}

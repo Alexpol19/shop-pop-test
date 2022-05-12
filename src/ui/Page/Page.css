@@ -1,0 +1,33 @@
+.page {
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.page__header {
+  flex: 0 0 50px;
+}
+
+.page__content {
+  display: flex;
+  flex: 1;
+}
+
+.page__part {
+  border-right: 1px solid #E5E5E5;
+  height: 100%;
+}
+
+.page__part-left {
+  flex: 0 0 132px;
+}
+
+.page__part-center {
+  flex: 1;
+}
+
+.page__part-right {
+  flex: 0 0 66px;
+  border: none;
+}

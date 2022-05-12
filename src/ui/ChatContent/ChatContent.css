@@ -1,0 +1,13 @@
+.chat-content {
+  height: 100%;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+[data-simplebar] {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.chat-content__list {
+  padding: 16px;
+}

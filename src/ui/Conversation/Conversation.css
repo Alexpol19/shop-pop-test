@@ -1,0 +1,57 @@
+.conversation {
+  cursor: pointer;
+  border-bottom: 1px solid #E5E5E5;
+  padding: 16px;
+}
+
+.conversation.active {
+  background: #CCEDFF;
+}
+
+.conversation__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.conversation__info {
+  display: flex;
+  align-items: center;
+  color: #454545;
+}
+
+.conversation__name {
+  color: #454545;
+}
+
+.conversation__separator {
+  color: #888888;
+}
+
+.conversation__social {
+  color: #25D366;
+}
+
+.conversation__time {
+  color: #888888;
+}
+
+.conversation__message {
+  padding-top: 8px;
+}
+
+.conversation__message p {
+  font-size: 12px;
+  line-height: 15px;
+  color: #212121;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.conversation.active .conversation__message p {
+  color: #000000;
+}

@@ -1,0 +1,82 @@
+.header {
+  background: #000000;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+}
+
+.header__left .home-btn {
+  background: #171717;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.header__left .home-btn svg,
+.header__left .home-btn path {
+  fill: #FFFFFF;
+}
+
+.header__left .company {
+  background: #171717;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8.5px 12px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.header__left .company span {
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+  font-weight: 600;
+  padding-right: 8px;
+}
+
+.header__left .company svg,
+.header__left .company path {
+  fill: #888888;
+}
+
+.header__center .page-title {
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.header__right .user-name {
+  background: #171717;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8.5px 12px;
+  cursor: pointer;
+}
+
+.header__right .user-name span {
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+  font-weight: 600;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.header__right .user-name svg,
+.header__right .user-name path {
+  fill: #888888;
+}
