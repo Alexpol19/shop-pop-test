@@ -7,6 +7,7 @@ import {ReactComponent as SendSVG} from '../../images/send.svg';
 
 const ChatActionsAdditional = ({
   sendMessage,
+  disabled,
 }) => {
   return (
     <div className="additional-actions">
@@ -21,7 +22,10 @@ const ChatActionsAdditional = ({
           <AttachmentSVG />
         </div>
       </div>
-      <button className="additional-actions__send" onClick={sendMessage}>
+      <button
+        className={`additional-actions__send ${disabled ? 'additional-actions__send-disabled' : ''}`}
+        onClick={sendMessage}
+      >
         <span>Send message</span>
         <SendSVG />
       </button>

@@ -38,3 +38,9 @@
 .chat-bubbles__pack-right .chat-bubbles__pack-logo {
   right: 0;
 }
+
+.chat-bubble-loader-wrapper {
+  padding-right: 14px;
+  padding-top: 14px;
+  padding-bottom: 5px;
+}

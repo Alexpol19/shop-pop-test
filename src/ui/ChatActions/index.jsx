@@ -6,6 +6,7 @@ const ChatActions = ({
   currentMessage,
   sendMessage,
   setCurrentMessage,
+  loading,
 }) => {
   const onChange = (e) => {
     setCurrentMessage(e.target.value)
@@ -17,10 +18,14 @@ const ChatActions = ({
           value={currentMessage}
           placeholder="Write a reply..."
           onChange={onChange}
+          disabled={loading}
         />
       </div>
       <div className="chat-actions__bottom">
-        <ChatActionsAdditional sendMessage={sendMessage} />
+        <ChatActionsAdditional
+          sendMessage={sendMessage}
+          disabled={loading}
+        />
       </div>
     </div>
   )

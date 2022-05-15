@@ -11,3 +11,7 @@
 .chat-content__list {
   padding: 16px;
 }
+
+.chat-content__loader {
+  margin-top: 20px;
+}

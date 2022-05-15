@@ -9,23 +9,33 @@ import './Chat.css'
 const Chat = () => {
   const {
     currentConversation,
+    currentConversationMessages,
     sendMessage,
     currentMessage,
-    setCurrentMessage
+    setCurrentMessage,
+    loadingConversations,
+    loadingMessages,
+    sentMessageLoading,
   } = useContext(InboxContext);
 
   return (
     <div className="chat-component">
       <div className="chat-component__top">
-        <ChatHeader userName={getUserName(currentConversation)} />
+        <ChatHeader
+          loading={loadingConversations}
+          userName={getUserName(currentConversation)}
+        />
       </div>
       <div className="chat-component__content">
         <ChatContent
-          messages={currentConversation ? currentConversation.messages : []}
+          loading={loadingConversations || loadingMessages}
+          sentMessageLoading={sentMessageLoading}
+          messages={currentConversationMessages}
         />
       </div>
       <div className="chat-component__bottom">
         <ChatActions
+          loading={sentMessageLoading || loadingConversations || loadingMessages}
           currentMessage={currentMessage}
           sendMessage={sendMessage}
           setCurrentMessage={setCurrentMessage}

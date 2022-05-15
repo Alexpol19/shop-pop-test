@@ -3,19 +3,20 @@ import { createContext } from 'react'
 function noop() { }
 
 export const InboxContext = createContext({
+  loadingConversations: false,
+  loadingMessages: false,
+  sentMessageLoading: false,
   conversations: [],
   fetchConversations: noop,
   setConversations: noop,
 
   currentConversation: null,
-  setCurrentConversationById: noop,
+  currentConversationMessages: [],
+  getChat: noop,
 
-  conversationDraftMessages: {},
-  setConversationDraftMessage: noop,
+  currentMessage: '',
+  getDraftMessageByChatId: noop,
+  setCurrentMessage: noop,
   
   sendMessage: noop,
-
-  // temporar. remove after drafts implementing
-  currentMessage: '',
-  setCurrentMessage: noop,
 })

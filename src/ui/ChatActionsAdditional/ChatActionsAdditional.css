@@ -51,3 +51,8 @@
 .additional-actions__send path {
   fill: #FFFFFF;
 }
+
+.additional-actions__send-disabled {
+  background: rgba(0, 132, 255, 0.445);
+  pointer-events: none;
+}

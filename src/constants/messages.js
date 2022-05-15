@@ -1,0 +1,1 @@
+export const timeDifference = 30*60000//30 ms

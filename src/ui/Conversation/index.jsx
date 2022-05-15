@@ -1,10 +1,8 @@
-import React from 'react';
-import checkmark from '../../images/checkmark-large.svg';
-import people from '../../images/people.svg';
+import React, { useMemo } from 'react';
 import { getUserName } from '../../utils/user';
 import './Conversation.css'
 
-const Conversation = ({item, onClick, isActive}) => {
+const Conversation = ({item, onClick, isActive, getDraftMessage,}) => {
   const getUserChannel = () => {
     if(item && item.customer && item.customer.channel_address) {
       const channel = item.customer.channel_address.split(':')[0]
@@ -23,6 +21,7 @@ const Conversation = ({item, onClick, isActive}) => {
     }
   }
 
+  const draftMessage = getDraftMessage(item.id)
   return (
     <div className={`conversation ${isActive ? 'active' : ''}`} onClick={onClick}>
       <div className="conversation__header">
@@ -38,7 +37,9 @@ const Conversation = ({item, onClick, isActive}) => {
         <div className="conversation__time">just now</div>
       </div>
       <div className="conversation__message">
-        <p>{getLastMessage()}</p>
+        {draftMessage.length && !isActive ? (
+          <p className="conversation__message-draft"><span>Draft: </span><span>{draftMessage}...</span></p>
+        ) : <p>{getLastMessage()}</p>}
         {/* <div className="conversation__actions">
           <button className="conversation__actions-btn conversation__actions-btn-info">
             <img src={checkmark} alt="conversation info" />
